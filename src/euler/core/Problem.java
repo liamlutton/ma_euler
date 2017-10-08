@@ -8,7 +8,8 @@ public abstract class Problem {
 	public void run(){
 		long now = System.currentTimeMillis();
 		onRun();
-		System.out.println("Problem took " + (System.currentTimeMillis() - now) + "ms to run.");
+		String[] strs = this.getClass().getName().split("\\.");
+		System.out.println(strs[strs.length - 1] + " took " + (System.currentTimeMillis() - now) + "ms to run.");
 	}
 	
 	/**
